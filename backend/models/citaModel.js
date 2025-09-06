@@ -1,0 +1,17 @@
+import mongoose from 'mongoose';
+
+
+const citaSchema = new mongoose.Schema({
+    fecha: {type:String, required:true},
+    hora: {type:String, required:true},
+    paciente: {type:String, required:true},
+    medico: {type:String, required:true},
+    consultorio: {type:String, required:true},
+    estado: {type:String, required:true},
+    observaciones: {type:String, required:true}
+},
+ {timestamps:true}
+)
+
+const citaModel = mongoose.model('citas', citaSchema)
+export default citaModel;
